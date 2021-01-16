@@ -2,12 +2,16 @@ import logo from './logo.svg';
 import Header from './components/Header'
 import './App.css';
 import CartWidget from './components/CartWidget';
+import Shop from './components/Shop';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <CartWidget/>
+      <div className='shop-container'>
+        <Shop/>
+        <CartWidget/>
+      </div>
     </div>
   );
 }

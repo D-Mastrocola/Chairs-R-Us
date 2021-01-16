@@ -29,7 +29,7 @@ nav {
 }
 .cart-widget {
   width: 20%;
-  height: calc(100% - 80px);
+  height: 100%;
   float: right;
   background-color: rgb(70, 70, 160);
   text-align: center;
@@ -53,4 +53,15 @@ nav {
 }
 .cart-item-name {
   margin: 0 8em;
+}
+.shop-container {
+  display: flex;
+  height: calc(100% - 80px);
+}
+.shop {
+  width: 80%;
+  height: 100%;
+  background-color: bisque;
+  margin: 0;
+  color: #000;
 }
