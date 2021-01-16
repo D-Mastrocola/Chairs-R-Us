@@ -1,14 +1,10 @@
 import React from 'react';
 
 function ShopCard(props) {
-  let cardStyle = {
-    backgroundImage: "url(" + props.imgSrc + ")"
-  };
-  console.log(cardStyle.backgroundImage);
   return(
     <div className='shop-card'>
-      <div className='shop-card-img' style={cardStyle}>
-
+      <div className='shop-card-img' style={{backgroundImage: "url(" + props.imgSrc + ")"}}>
+        <button className='add-to-cart-btn'>Add To Cart</button>
       </div>
       <ul>
         <li>{props.name}</li>
