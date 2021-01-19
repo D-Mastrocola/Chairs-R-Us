@@ -5,6 +5,8 @@ class ShopCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: this.props.name,
+      imgSrc: this.props.imgSrc
     };
     this.addToCart = this.addToCart.bind(this);
   }
@@ -16,8 +18,8 @@ class ShopCard extends Component {
   render() {
     return(
       <div className='shop-card'>
-        <div className='shop-card-img' style={{backgroundImage: "url(" + this.props.imgSrc + ")"}}>
-          <button className='add-to-cart-btn' onClick={() => this.addToCart(this.props.name, this.props.imgSrc)}>Add To Cart</button>
+        <div className='shop-card-img' style={{backgroundImage: "url(" + this.state.imgSrc + ")"}}>
+          <button className='add-to-cart-btn' onClick={() => this.addToCart(this.state)}>Add To Cart</button>
         </div>
         <ul>
           <li>{this.props.name}</li>

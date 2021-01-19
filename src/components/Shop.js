@@ -24,8 +24,8 @@ class Shop extends Component{
       </main>
     )
   }
-  addToCart(name, imgSrc) {
-    console.log(name + '\n' + imgSrc)
+  addToCart(values) {
+    console.log(values)
   }
   
 }
