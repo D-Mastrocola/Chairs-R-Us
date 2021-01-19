@@ -21,6 +21,9 @@ nav {
   margin-left: auto;
   margin-right: 3em;
 }
+main {
+  width: 100%;
+}
 .cart-link {
   text-decoration: none;
   color: #fff;
@@ -28,11 +31,15 @@ nav {
   font-size: 1.3em;
 }
 .cart-widget {
-  width: 20%;
-  height: 100%;
+  width: 100%;
+  height: calc(100vh - 80px);
   float: right;
   background-color: rgb(70, 70, 160);
   text-align: center;
+  grid-row-start: 0;
+  grid-row-end: 2;
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 .cart-widget-list {
   list-style: none;
@@ -59,13 +66,13 @@ nav {
   height: calc(100% - 80px);
 }
 .shop {
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-color: bisque;
   margin: 0;
   color: #000;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 33% 33% 33%;;
 }
 .shop-card {

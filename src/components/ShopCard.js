@@ -17,7 +17,7 @@ class ShopCard extends Component {
     return(
       <div className='shop-card'>
         <div className='shop-card-img' style={{backgroundImage: "url(" + this.props.imgSrc + ")"}}>
-          <button className='add-to-cart-btn' onClick={() => this.addToCart()}>Add To Cart</button>
+          <button className='add-to-cart-btn' onClick={() => this.addToCart(this.props.name, this.props.imgSrc)}>Add To Cart</button>
         </div>
         <ul>
           <li>{this.props.name}</li>
