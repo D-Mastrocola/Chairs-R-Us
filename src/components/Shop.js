@@ -11,6 +11,7 @@ class Shop extends Component{
       checkout: false
     }
     this.addToCart = this.addToCart.bind(this);
+    console.log(this.state.cart);
   }
   render() {
     return (
