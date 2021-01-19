@@ -12,7 +12,7 @@ class ShopCard extends Component {
   }
 
   addToCart() {
-    this.props.addToCart();
+    this.props.addToCart(this.state);
   }
 
   render() {
