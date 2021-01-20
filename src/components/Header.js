@@ -5,10 +5,7 @@ function Header() {
     <header>
       <h1>Chairs R Us</h1>
       <nav>
-        <a className="cart-link" href="#">
-          <img src="#" />
-          Cart
-        </a>
+        <a className="cart-link" href="#">Cart</a>
       </nav>
     </header>
   );
