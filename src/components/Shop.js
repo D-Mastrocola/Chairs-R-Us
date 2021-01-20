@@ -7,11 +7,16 @@ class Shop extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      cart: [],
-      checkout: false
+      cart: []
     }
     this.addToCart = this.addToCart.bind(this);
-    console.log(this.state.cart);
+  }
+  componentDidUpdate() {
+    console.log('update')
+    console.log(this.state.cart)
+  }
+  componentDidMount() {
+    console.log('mount')
   }
   render() {
     return (
@@ -21,14 +26,15 @@ class Shop extends Component{
         <ShopCard addToCart={this.addToCart} price='240' name='Sidera White Crosshatch Chair' imgSrc='https://cb2.scene7.com/is/image/CB2/SideraChairWhiteSHS17_1x1/?$web_zoom$&190905021443&wid=450&hei=450'/>
         <ShopCard addToCart={this.addToCart} price='302' name='Racing Game Chair' imgSrc='https://secure.img1-fg.wfcdn.com/im/39470754/resize-h800%5Ecompr-r85/1232/123208412/Massage+PC+%2526+Racing+Game+Chair.jpg'/>
         <ShopCard addToCart={this.addToCart} price='399' name='Comfy Lounge Chair' imgSrc='https://homedesignlover.com/wp-content/uploads/2013/01/2-main-street.jpg'/>
-        <CartWidget cart={this.state.cart}/>
+        <CartWidget key='cart-widget-key' cart={this.state.cart}/>
       </main>
     )
   }
   addToCart(values) {
-    this.setState({
-      cart: [...this.state.cart, values]
-    })
+    let newCart = this.state.cart.concat(values);
+    this.setState(() => ({
+      cart: newCart
+    }));
   }
   
 }

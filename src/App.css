@@ -51,6 +51,16 @@ main {
   display: flex;
   align-items: center;
   margin: 1em;
+  height: 80px; 
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.cart-widget-list-item img {
+  height: 100%;
+}
+.cart-widget-list-item h4 {
+  width: 70%;
 }
 .placeholder-img {
   background-color: #000;
