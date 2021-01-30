@@ -18,6 +18,11 @@ class Shop extends Component {
     console.log('update')
     console.log(this.state.cart)
   }
+  viewShop() {
+    this.setState({
+      view: 'shop'
+    });
+  }
   componentDidMount() {
     console.log('mount')
   }
@@ -36,9 +41,9 @@ class Shop extends Component {
         <ShopCard viewProduct={this.viewProduct} addToCart={this.addToCart} price='302' name='Racing Game Chair' imgSrc='https://secure.img1-fg.wfcdn.com/im/39470754/resize-h800%5Ecompr-r85/1232/123208412/Massage+PC+%2526+Racing+Game+Chair.jpg' />
         <ShopCard viewProduct={this.viewProduct} addToCart={this.addToCart} price='399' name='Comfy Lounge Chair' imgSrc='https://homedesignlover.com/wp-content/uploads/2013/01/2-main-street.jpg' />
       </main>
-    ) : (
+    ) : this.state.view === 'product' ? (
         <main className='product-view'>
-          <button className='back-btn product-btn'>Back</button>
+          <button onClick={() => this.viewShop()} className='back-btn product-btn'>Back</button>
           <div>
             <h1>{this.state.product.name}</h1>
             <img src={this.state.product.imgSrc} />
@@ -49,6 +54,10 @@ class Shop extends Component {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
           <button className='back-btn product-btn' >Add To Cart</button>
+        </main>
+      ) : (
+        <main>
+          
         </main>
       )
   }
