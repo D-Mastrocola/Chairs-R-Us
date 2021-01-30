@@ -18,22 +18,23 @@ header h1 {
   margin: 0 1em;
 }
 nav {
-  margin-left: auto;
   margin-right: 3em;
 }
 main {
   width: 100%;
 }
-.cart-link {
+.header-link {
   text-decoration: none;
   color: #fff;
   font-family: sans-serif;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  margin: 5em;
 }
 .cart-widget {
   width: 100%;
   height: calc(100vh - 80px);
   float: right;
+  color: #fff;
   background-color: rgb(70, 70, 160);
   text-align: center;
   grid-row-start: 0;
@@ -117,4 +118,11 @@ main {
 .add-to-cart-btn:hover {
   background-color: #000;
   opacity: .6;
+}
+.product-view {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

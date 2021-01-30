@@ -7,7 +7,8 @@ class ShopCard extends Component {
     this.state = {
       name: this.props.name,
       imgSrc: this.props.imgSrc,
-      view: 'card'
+      view: 'card',
+      price: this.props.price
     };
     this.addToCart = this.addToCart.bind(this);
     this.viewProduct = this.viewProduct.bind(this);
@@ -28,7 +29,7 @@ class ShopCard extends Component {
         </div>
         <ul>
           <li>{this.props.name}</li>
-          <li>${this.props.price}.00</li>
+          <li>${this.props.price}.99</li>
         </ul>
       </div>
     ) : (

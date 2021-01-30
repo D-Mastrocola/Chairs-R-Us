@@ -8,7 +8,8 @@ function App() {
       <header>
         <h1>Chairs R Us</h1>
         <nav>
-          <a className="cart-link" href="#">Cart</a>
+          <a className='header-link' href='./shop'>Shop</a>
+          <a className="header-link" href="#">Cart</a>
         </nav>
       </header>
       <div className='shop-container'>
