@@ -22,21 +22,19 @@ class ShopCard extends Component {
   }
 
   render() {
-    return this.state.view === 'card' ? (
+    return (
       <div className='shop-card'>
-        <div className='shop-card-img' style={{backgroundImage: "url(" + this.state.imgSrc + ")"}}>
-          <button className='add-to-cart-btn' onClick={() => this.viewProduct()}>Add To Cart</button>
+        <div className='shop-card-img' style={{ backgroundImage: "url(" + this.state.imgSrc + ")" }}>
+          <button className='add-to-cart-btn' onClick={() => this.viewProduct()}>View Item</button>
         </div>
         <ul>
           <li>{this.props.name}</li>
           <li>${this.props.price}.99</li>
         </ul>
       </div>
-    ) : (
-      <div></div>
     )
   }
-  
+
 }
 
 export default ShopCard;
