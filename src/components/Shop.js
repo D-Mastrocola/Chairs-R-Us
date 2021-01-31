@@ -97,9 +97,10 @@ class Shop extends Component {
                 <h1>Cart</h1>
                 <ul className='cart-list'>
                   {this.state.cart.map((e) => {
-                    return <li className='cart-list-item'><img src={e.imgSrc}/><p>{this.state.product.name}</p><button>Remove</button></li>
+                    return <li className='cart-list-item'><img src={e.imgSrc}/><p>{this.state.product.name}</p><button className='remove-btn'>Remove</button></li>
                   })}
                 </ul>
+                <button>Checkout</button>
               </div>
             </main>
           </div>
