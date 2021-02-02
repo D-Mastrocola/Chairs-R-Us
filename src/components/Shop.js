@@ -14,22 +14,22 @@ class Shop extends Component {
     this.addToCart = this.addToCart.bind(this);
     this.viewProduct = this.viewProduct.bind(this);
   }
-  componentDidUpdate() {
-    console.log('update')
-    console.log(this.state.cart)
-  }
   viewShop() {
     this.setState({
       view: 'shop'
     });
   }
-  componentDidMount() {
-    console.log('mount')
-  }
   viewProduct(values) {
     this.setState({
       product: values,
       view: 'product'
+    })
+  }
+  removeItem(index) {
+    let newCart = this.state.cart;
+    newCart.splice(index, 1);
+    this.setState({
+      cart: newCart
     })
   }
   addToCart(values) {
@@ -96,8 +96,8 @@ class Shop extends Component {
               <div className='cart-container'>
                 <h1>Cart</h1>
                 <ul className='cart-list'>
-                  {this.state.cart.map((e) => {
-                    return <li className='cart-list-item'><img src={e.imgSrc}/><p>{e.name}</p><button className='remove-btn'>Remove</button></li>
+                  {this.state.cart.map((e, index) => {
+                    return <li className='cart-list-item'><img src={e.imgSrc}/><p>{e.name}</p><button className='remove-btn' onClick={() => this.removeItem(index)}>Remove</button></li>
                   })}
                 </ul>
                 <button>Checkout</button>
