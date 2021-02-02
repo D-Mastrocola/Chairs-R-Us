@@ -30,8 +30,13 @@ class Shop extends Component {
   removeItem(index) {
     let newCart = this.state.cart;
     newCart.splice(index, 1);
+    let newTotal = 0;
+    newCart.forEach(e => {
+      newTotal += parseInt(e.price) + .99;
+    })
     this.setState({
-      cart: newCart
+      cart: newCart,
+      total: newTotal
     })
   }
   addToCart(values) {
