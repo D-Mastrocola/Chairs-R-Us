@@ -9,8 +9,10 @@ class Shop extends Component {
       cart: [],
       product: {
       },
-      view: 'shop'
+      view: 'shop',
+      total: 0
     }
+    this.total = 0;
     this.addToCart = this.addToCart.bind(this);
     this.viewProduct = this.viewProduct.bind(this);
   }
@@ -97,8 +99,10 @@ class Shop extends Component {
                 <h1>Cart</h1>
                 <ul className='cart-list'>
                   {this.state.cart.map((e, index) => {
-                    return <li className='cart-list-item'><img src={e.imgSrc}/><p>{e.name}</p><button className='remove-btn' onClick={() => this.removeItem(index)}>Remove</button></li>
+                    return <li className='cart-list-item'><img src={e.imgSrc}/><p className='cart-item-name'>{e.name}</p> <p className='cart-item-price'>${e.price}.99</p> <button className='remove-btn' onClick={() => this.removeItem(index)}>Remove</button></li>
                   })}
+                  <li><div className='price-total-spacer'></div><div className='price-total'>{
+                  })}</div></li>
                 </ul>
                 <button>Checkout</button>
               </div>
