@@ -35,7 +35,15 @@ class Shop extends Component {
     })
   }
   addToCart(values) {
-    console.log(values)
+    let newCart = this.state.cart.concat(values);
+    let newTotal = 0;
+    newCart.forEach(e => {
+      newTotal += parseInt(e.price) + .99;
+    })
+    this.setState(() => ({
+      cart: newCart,
+      total: newTotal
+    }));
   }
   viewCart() {
     this.setState({
@@ -101,20 +109,13 @@ class Shop extends Component {
                   {this.state.cart.map((e, index) => {
                     return <li className='cart-list-item'><img src={e.imgSrc}/><p className='cart-item-name'>{e.name}</p> <p className='cart-item-price'>${e.price}.99</p> <button className='remove-btn' onClick={() => this.removeItem(index)}>Remove</button></li>
                   })}
-                  <li><div className='price-total-spacer'></div><div className='price-total'>{
-                  })}</div></li>
+                  <li className='price-total-li'><div className='price-total-spacer'>Total: </div><div className='price-total'>${this.state.total}</div></li>
                 </ul>
                 <button>Checkout</button>
               </div>
             </main>
           </div>
         )
-  }
-  addToCart(values) {
-    let newCart = this.state.cart.concat(values);
-    this.setState(() => ({
-      cart: newCart
-    }));
   }
 
 }

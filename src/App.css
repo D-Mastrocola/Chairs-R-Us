@@ -155,7 +155,6 @@ main {
   text-align: center;
   margin: 0;
   width: 100%;
-  font-weight: bold;
 }
 .remove-btn {
   height: 50%;
@@ -174,4 +173,19 @@ main {
   background-color: #fff;
   color: #ff0000;
   border: 3px solid #f00;
+}
+.price-total-li {
+  margin: 50px 0;
+  display: grid;
+  font-weight: bolder;
+  font-size: 1.3em;
+  grid-template-columns: calc(100px + 30%)  30% calc(40% - 100px);
+}
+.price-total-spacer {
+  text-align: right; 
+  padding: 0 1em;
+}
+.price-total {
+  text-align: center;
+  
 }
