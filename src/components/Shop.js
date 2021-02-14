@@ -116,7 +116,7 @@ class Shop extends Component {
                   })}
                   <li className='price-total-li'><div className='price-total-spacer'>Total: </div><div className='price-total'>${this.state.total}</div></li>
                 </ul>
-                <button>Checkout</button>
+                <button onClick={() => this.checkout()}>Checkout</button>
               </div>
             </main>
           </div>
