@@ -1,13 +1,12 @@
-import './App.css';
+import React from 'react';
+import Products from './components/Products/Products';
 
-import Shop from './components/Shop';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Shop />
+    <div>
+      <Products />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
