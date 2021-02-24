@@ -1,7 +1,9 @@
 # Chairs R Us
-An mockup ecommerce website for Chairs. Made with React and material-ui.
+An mockup ecommerce website for Chairs.
 
 ## Features
-- Commerce JS backend to retrieve products and handle cart info
-- Stripe to handle payment
-- Material-UI for style
+- Commerce JS handles all of the backend
+- Home page makes an API call to retrieve products
+- When you click the add to cart button it makes another api call to CommerceJS to add it to the cart. It returns a response and updates the cart icon amount in the top left corner.
+- When you click the cart icon using react routers it takes you the the cart page; Request Cart data from the commerceJS API then updates the page. You can add, subtract, remove, and/or completely empty the cart.
+- When you click checkout it calls the api asking for a checkout. It makes an api call for shipping price based on user input. Then using stripe you enter your card and when confrimed it sends an email confrimation and empties the cart
